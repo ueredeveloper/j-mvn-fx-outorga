@@ -48,7 +48,7 @@
     						loginTimeout=30;
 		</property>
 		
-		<property name="show_sql">true</property>
+		<!-- <property name="show_sql">true</property> -->
 		<!-- <property name="connection.url"></property>-->
     	<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
     	
@@ -65,7 +65,7 @@
 			<!-- Echo all executed SQL to stdout -->
 		<!-- <property name="show_sql">true</property> -->
 			<!-- Drop and re-create the database schema on startup -->
-		  <property name="hibernate.hbm2ddl.auto">update</property>  
+		  <!--  <property name="hibernate.hbm2ddl.auto">update</property>  -->
 		
 		
 		<property name="hibernate.max_fetch_depth">0</property>
