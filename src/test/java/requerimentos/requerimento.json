@@ -1,0 +1,51 @@
+{
+  "usID": 1,
+  "enderecos": [
+    {
+      "endID": 2,
+      "endLogradouro": "Rua dos Novaes, Casa 10",
+      "documentos": [],
+      "interferencias": [
+        {
+          "subCaesb": "sim",
+          "subEstatico": "150",
+          "subDinamico": "120",
+          "subVazaoTeste": "5.000",
+          "subVazaoOutorgada": 4000.0,
+          "subProfundidade": "180",
+          "subCod_plan": "125_TRF",
+          "subSubSistemaFK": {
+            "subID": 1,
+            "subDescricao": "P1",
+            "sistemaID": 0,
+            "subDominioID": 0,
+            "subterranea": []
+          },
+          "interID": 1,
+          "finalidades": [],
+          "interDDLatitude": -15.66,
+          "interDDLongitude": -47.55
+        },
+        {
+          "interID": 2,
+          "finalidades": [],
+          "interDDLatitude": -16.66,
+          "interDDLongitude": -48.55
+        }
+      ],
+      "vistorias": []
+    }
+  ],
+  "usNome": "João Gilberto",
+  "usCPFCNPJ": "111222333-56",
+  "usLogadouro": "Rua dos Brejos",
+  "usRA": "Sobradinho",
+  "usCidade": "Brasília",
+  "usEstado": "DF",
+  "usCEP": "72130-050",
+  "usTelefone": "3354-5687",
+  "usCelular": "9 9562-5689",
+  "usEmail": "joaogil@gmail.com",
+  "usRepresentante": "Aqualit - Engenharia de Poços",
+  "usRepresentanteTelefone": "3365-4578"
+}

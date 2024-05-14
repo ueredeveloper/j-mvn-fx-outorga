@@ -1,0 +1,151 @@
+
+  var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
+  var sc1 = document.createElementNS('http://www.w3.org/1999/xhtml', 'script');
+  var sc2 = document.createElementNS('http://www.w3.org/1999/xhtml', 'script');
+  var sc3 = document.createElementNS('http://www.w3.org/1999/xhtml', 'script');
+
+  var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
+
+  var table = document.createElementNS('http://www.w3.org/1999/xhtml', 'table');
+  table.setAttribute('id', 'tabela');
+  var thead = document.createElementNS('http://www.w3.org/1999/xhtml', 'thead');
+  thead.innerHTML = '<tr><th>Documento</th><th>SEI</th><th>Processo</th></tr>';
+  var tboady = document.createElementNS('http://www.w3.org/1999/xhtml', 'tbody');
+  tboady.setAttribute('id', 'documentos');
+
+  // Jquery 1 - Biblioteca
+  sc1.setAttribute('src', 'https://code.jquery.com/jquery-3.3.1.js');
+  doc.documentElement.appendChild(sc1);
+  //Jquery 2 - Biblioteca
+  sc2.setAttribute('src','https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js');
+  doc.documentElement.appendChild(sc2);
+  //Scrip JQuery 3 - Lógica
+  sc3.innerHTML = "$(document).ready(function() {$('#tabela').DataTable( {'scrollY':'200px','scrollCollapse':true,'paging':false});});";
+
+  doc.documentElement.appendChild(body);
+
+  body.appendChild(table);
+
+  table.appendChild(thead);
+  table.appendChild(tboady);
+  body.appendChild(sc3);
+
+  console.log(doc.getElementsByTagName("html")[0].outerHTML);
+  
+  
+  
+  ///////////////////
+  
+  	 var strEndereco  = '-15.768630259183379,-47.9467031486771';
+  	 
+  	 
+  	var e = strEndereco.split(',');
+	  // transformar em formato maps.LatLng
+	  var endereco = new google.maps.LatLng({
+	        lat: parseFloat(e[0]), 
+	        lng: parseFloat(e[1])});
+	  
+  	 
+	  var strDet = '|Memorando 1,123456789,197222555/2018'
+			+ '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      + '|Carta 10,987654321,197222666/2016'
+	      ;
+	
+	/* separar documentos relacionados */
+	var arrayDocumentos = strDet.split('|');
+	
+	
+	/* mostrar documentos relacionados */
+	for (i=0; i<arrayDocumentos.length; i++) {
+	console.log(i + " " + arrayDocumentos[i]);
+	}
+	
+	/* separar nome, sei, processo do documento */
+	
+	var arrayInformacoesDocumentos = [];
+	
+	var x =
+	  			
+	 				'<tr><td>' 
+	              +  	'</td><td>'
+	              + 	'</td><td>'
+	              + 	'</td></tr>'
+	          
+	;
+	
+	for (i=1;i<arrayDocumentos.length;i++){
+	
+		arrayInformacoesDocumentos[i] = arrayDocumentos[i].split(',');
+		        // fica assim d[1][0] =  subterrânea
+	          
+	  console.log('array doc len ' + arrayDocumentos.length);
+	 
+	 var y =
+	 		'<tr><td>' 
+	      +  	arrayInformacoesDocumentos[i][0] + '</td><td>'
+	      + 	arrayInformacoesDocumentos[i][1] + '</td><td>'
+	      + 	arrayInformacoesDocumentos[i][2] + '</td></tr>'
+	          
+	;
+	
+	x += y;
+	
+	doc.getElementById("documentos").innerHTML = x
+	          
+	}
+	  //////////////////
+	
+	var imgInterferencia = 'http://icons.iconarchive.com/icons/double-j-design/super-mono-3d/32/button-info-icon.png';
+	var imgEndereco = 'http://icons.iconarchive.com/icons/double-j-design/super-mono-3d/32/home-icon.png';
+	
+	
+	// array de marcadores
+	var markers = [];
+
+	
+
+	var infowindow = new google.maps.InfoWindow();
+		
+	infowindow.setContent(doc.getElementsByTagName("html")[0].outerHTML);
+
+	marker = new google.maps.Marker({
+	    position: endereco,
+	  icon: imgInterferencia,
+	    map: map,
+	    title: 'endereco'
+	  });
+
+  
+	//creates an infowindow 'key' in the marker.
+	marker.infowindow = infowindow;
+
+	//finally call the explicit infowindow object
+	marker.addListener('click', function() {
+	return this.infowindow.open(map, this);
+	})
+
+	// Alternate way of adding infowindow listeners
+	google.maps.event.addListener(marker, 'click', function() {
+		this.infowindow.open(map, this); 
+	});
+
+	// marcador do endereco
+	marker [0] = new google.maps.Marker({
+	position: e,
+	icon: imgEndereco,
+	map: map,
+	title: 'Hello World!'
+	});

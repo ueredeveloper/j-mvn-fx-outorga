@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+		
+<hibernate-configuration>
+
+    <session-factory>
+    
+    		<!-- Configuração de conexão com o Banco de Dados -->
+    		
+    		<!-- 	<property 
+    					name="connection.url">
+    					jdbc:sqlserver://srvsqlhomolog1;
+    					databaseName=DB_SRH_TESTE2;
+    					integratedSecurity=true;
+    					</property> -->
+    					
+    					<!-- 
+    					
+    					jdbc:sqlserver://srvsqlhomolog1.database.windows.net:1433;
+    						database=DB_SRH;user=fabricio.barrozo@srvsqlhomolog1;
+    						password={your_password_here};
+    						encrypt=true;
+    						trustServerCertificate=false;
+    						hostNameInCertificate=*.database.windows.net;
+    						loginTimeout=30;
+    						
+    						
+    						OUTRO BANCO
+    						DB_SRH_TESTE
+    					
+    					 -->
+    		
+		<!--  <property name="connection.url">jdbc:sqlserver://srvsqlhomolog1.database.windows.net:1433;databaseName=DB_SRH;
+							encrypt=true;
+    						trustServerCertificate=false;
+    						hostNameInCertificate=*.database.windows.net;
+    						loginTimeout=30;
+		</property>-->
+		
+		<!--  Banco de Dados - Welber -->
+		
+		<property name="connection.url">jdbc:sqlserver://cout.database.windows.net:1433;databaseName=Outorga;
+							encrypt=true;
+    						trustServerCertificate=false;
+    						hostNameInCertificate=*.database.windows.net;
+    						loginTimeout=30;
+		</property>
+		
+		<property name="show_sql">true</property>
+		<!-- <property name="connection.url"></property>-->
+    	<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    	
+    	<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+    	<property name="hibernate.dialect">org.hibernate.spatial.dialect.sqlserver.SqlServer2008SpatialDialect</property>
+		
+		
+			<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+		
+			<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+		
+			<!-- Echo all executed SQL to stdout -->
+		<!-- <property name="show_sql">true</property> -->
+			<!-- Drop and re-create the database schema on startup -->
+		  <property name="hibernate.hbm2ddl.auto">update</property>  
+		
+		
+		<property name="hibernate.max_fetch_depth">0</property>
+		
+		
+		
+		
+		
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">60</property>
+		
+		<!-- MAPEAMENTO DAS ENTIDADES -->
+		<mapping class="entidades.Processo"/>
+			<mapping class="entidades.Demanda"/>
+			
+			<mapping class="entidades.Documento"/> 
+				<mapping class="entidades.Parecer"/> 
+				<mapping class="entidades.NotaTecnica"/> 
+		
+		<mapping class="entidades.Endereco"/>
+			<mapping class="entidades.RA"/>
+			
+		<mapping class="entidades.Interferencia"/>
+			<mapping class="entidades.BaciasHidrograficas"/>
+			<mapping class="entidades.UnidadeHidrografica"/>
+			<mapping class="entidades.TipoInterferencia"/>
+			<mapping class="entidades.SituacaoProcesso"/>
+			<mapping class="entidades.TipoAto"/>
+			<mapping class="entidades.TipoOutorga"/>
+			<mapping class="entidades.SubtipoOutorga"/> 
+			
+		<mapping class="entidades.Subterranea"/>
+			<mapping class="entidades.TipoPoco"/>
+			<mapping class="entidades.SubSistema"/>
+		
+		<mapping class="entidades.Superficial"/>
+			<mapping class="entidades.LocalCaptacao"/>
+			<mapping class="entidades.FormaCaptacao"/>
+			<mapping class="entidades.MetodoIrrigacao"/>
+		
+		<mapping class="entidades.Usuario"/>
+		
+		<mapping class="entidades.Vistoria"/>
+		<mapping class="entidades.Ato"/>
+		
+		<mapping class="entidades.ModelosHTML"/>
+		
+		<mapping class="entidades.Finalidade"/>
+			<mapping class="entidades.FinalidadeRequerida"/>
+			<mapping class="entidades.FinalidadeAutorizada"/>
+			
+			<mapping class="entidades.BancoAccess"/>
+			<mapping class="entidades.BancoCaesb"/>
+			
+			<mapping class="entidades.Colaborador"/>
+			
+    </session-factory>
+    
+</hibernate-configuration>

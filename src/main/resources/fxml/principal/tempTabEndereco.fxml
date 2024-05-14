@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="1000.0" prefWidth="980.0" stylesheets="@../../css/principal_mapa_azul.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="pDemanda" layoutX="15.0" layoutY="10.0" prefHeight="60.0" prefWidth="950.0" styleClass="panes">
+         <children>
+            <Label layoutX="27.0" layoutY="15.0" prefHeight="30.0" prefWidth="75.0" text="DEMANDA:" />
+            <Label fx:id="lblDemanda" layoutX="109.0" layoutY="15.0" prefHeight="30.0" prefWidth="740.0">
+               
+            </Label>
+            <Button fx:id="btnDemanda" layoutX="859.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnEndCoordHab" prefHeight="25.0" prefWidth="65.0" text="&lt;&lt;&lt;" />
+         </children>
+      </Pane>
+      <Pane fx:id="pDadosBasicos" layoutX="25.0" layoutY="85.0" prefHeight="140.0" prefWidth="930.0" styleClass="panes">
+         <children>
+            <Label layoutX="15.0" layoutY="5.0" prefHeight="30.0" prefWidth="425.0" text="ENDEREÇO DO EMPREENDIMENTO:" />
+            <TextField fx:id="tfEnd" layoutX="15.0" layoutY="35.0" prefHeight="30.0" prefWidth="420.0" />
+            <Label layoutX="445.0" layoutY="5.0" prefHeight="30.0" prefWidth="165.0" text="REGIÃO ADMINISTRATIVA" />
+            <ComboBox layoutX="445.0" layoutY="35.0" prefHeight="30.0" prefWidth="165.0" />
+            <Label layoutX="620.0" layoutY="5.0" prefHeight="30.0" prefWidth="100.0" text="CEP:" />
+            <TextField fx:id="tfEndCep" layoutX="620.0" layoutY="35.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="730.0" layoutY="5.0" prefHeight="30.0" prefWidth="100.0" text="CIDADE:" />
+            <TextField fx:id="tfEndCid" layoutX="730.0" layoutY="35.0" prefHeight="30.0" prefWidth="100.0" />
+            <Label layoutX="840.0" layoutY="5.0" prefHeight="30.0" prefWidth="60.0" text="UF: " />
+            <ComboBox layoutX="840.0" layoutY="35.0" prefHeight="30.0" prefWidth="75.0" />
+            <CheckBox layoutX="16.0" layoutY="65.0" prefHeight="20.0" prefWidth="260.0" text="colocar cada palavra em maiúsculo" />
+            <Label layoutX="183.0" layoutY="100.0" prefHeight="30.0" prefWidth="110.0" text="LATITUDE (Y): " />
+            <TextField fx:id="tfEndLat" layoutX="303.0" layoutY="100.0" prefHeight="30.0" prefWidth="140.0" promptText="-15.7754084" />
+            <Label layoutX="453.0" layoutY="100.0" prefHeight="30.0" prefWidth="110.0" text="LONGITUDE (X): " />
+            <TextField fx:id="tfEndLon" layoutX="573.0" layoutY="100.0" prefHeight="30.0" prefWidth="140.0" promptText="-47.9411395" />
+            <Button fx:id="btnEndMaps" layoutX="723.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnEndMapsHab" prefHeight="25.0" prefWidth="25.0" />
+            <Button layoutX="758.0" layoutY="103.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="645.0" prefHeight="720.0" prefWidth="950.0">
+         <children>
+            <Pane fx:id="pPersistencia" layoutX="10.0" prefHeight="60.0" prefWidth="930.0" styleClass="panes">
+               <children>
+                  <Button fx:id="btnNovo" layoutX="18.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnNovoHab" prefHeight="25.0" prefWidth="95.0" text="Novo" />
+                  <Button fx:id="btnSalvar" layoutX="123.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnSalvarHab" prefHeight="25.0" prefWidth="95.0" text="Salvar" />
+                  <Button fx:id="btnEditar" layoutX="228.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnEditarHab" prefHeight="25.0" prefWidth="95.0" text="Editar" />
+                  <Button fx:id="btnExcluir" layoutX="333.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnExcluirHab" prefHeight="25.0" prefWidth="95.0" text="Excluir" />
+                  <Button fx:id="btnCancelar" layoutX="438.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnCancelarHab" prefHeight="25.0" prefWidth="95.0" text="Cancelar" />
+                  <TextField fx:id="tfPesquisar" layoutX="543.0" layoutY="18.0" prefHeight="25.0" prefWidth="265.0" />
+                  <Button fx:id="btnPesquisar" layoutX="818.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnPesquisarHab" prefHeight="25.0" prefWidth="95.0" text="Pesquisar" />
+               </children>
+            </Pane>
+            <TableView fx:id="tvLista" layoutX="10.0" layoutY="75.0" prefHeight="185.0" prefWidth="930.0">
+               <columns>
+                  <TableColumn fx:id="tcDesEnd" prefWidth="440.0" text="Endereço" />
+                  <TableColumn fx:id="tcEndRA" minWidth="0.0" prefWidth="232.0" text="RA" />
+                  <TableColumn fx:id="tcEndCid" prefWidth="232.0" text="CEP" />
+               </columns>
+            </TableView>
+            <Label fx:id="lblDataAtualizacao1" layoutX="690.0" layoutY="270.0" prefHeight="22.0" prefWidth="247.0" />
+            <Pane layoutX="10.0" layoutY="300.0" prefHeight="400.0" prefWidth="850.0" />
+            <Pane layoutX="870.0" layoutY="300.0" prefHeight="400.0" prefWidth="65.0" />
+         </children>
+      </Pane>
+      <Accordion layoutX="25.0" layoutY="235.0" prefHeight="400.0" prefWidth="930.0">
+         <panes>
+            <TitledPane animated="false" prefHeight="300.0" prefWidth="930.0" text="Shape do Endereco">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="928.0">
+                     <children>
+                        <Pane layoutX="12.0" layoutY="8.0" prefHeight="365.0" prefWidth="830.0" />
+                        <Pane layoutX="852.0" layoutY="8.0" prefHeight="365.0" prefWidth="65.0">
+                           <children>
+                              <Button layoutY="2.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="65.0" text="limpar" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</Pane>

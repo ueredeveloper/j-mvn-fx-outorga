@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="680.0" prefWidth="1140.0" styleClass="classFontSize" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="pPersistencia" layoutX="120.0" layoutY="233.0" prefHeight="50.0" prefWidth="900.0">
+         <children>
+            <Button fx:id="btnNovo" layoutX="41.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnNovoHab" prefHeight="22.0" prefWidth="76.0" text="Novo" />
+            <Button fx:id="btnSalvar" layoutX="128.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnSalvarHab" prefHeight="22.0" prefWidth="76.0" text="Salvar" />
+            <Button fx:id="btnEditar" layoutX="215.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnEditarHab" prefHeight="22.0" prefWidth="76.0" text="Editar" />
+            <Button fx:id="btnExcluir" layoutX="302.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnExcluirHab" prefHeight="22.0" prefWidth="76.0" text="Excluir" />
+            <Button fx:id="btnCancelar" layoutX="390.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnCancelarHab" prefHeight="22.0" prefWidth="76.0" text="Cancelar" />
+            <Button fx:id="btnPesquisar" layoutX="783.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnPesquisarHab" prefHeight="22.0" prefWidth="76.0" text="Pesquisar" />
+            <TextField fx:id="tfPesquisar" layoutX="477.0" layoutY="13.0" prefHeight="23.0" prefWidth="295.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tvLista" layoutX="120.0" layoutY="298.0" prefHeight="185.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="tcDesEnd" prefWidth="409.0" text="Endereço" />
+            <TableColumn fx:id="tcEndRA" minWidth="0.0" prefWidth="232.0" text="RA" />
+            <TableColumn fx:id="tcEndCid" prefWidth="232.0" text="CEP" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblEndereco" layoutX="207.0" layoutY="38.0" prefHeight="17.0" prefWidth="252.0" />
+      <Pane fx:id="p_lblDemanda" layoutX="120.0" layoutY="20.0" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #E9E9E9;">
+         <children>
+            <Label fx:id="lblDemanda1" layoutX="95.0" layoutY="13.0" prefHeight="25.0" prefWidth="750.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="16.0" text="Documento: " />
+            <Button fx:id="btnEndCoord" layoutX="856.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnEndCoordHab" prefHeight="25.0" prefWidth="25.0" />
+         </children>
+      </Pane>
+      <Label fx:id="lblDataAtualizacao" layoutX="664.0" layoutY="415.0" prefHeight="22.0" prefWidth="247.0" />
+      <Pane fx:id="pDadosBasicos" layoutX="120.0" layoutY="82.0" prefHeight="147.0" prefWidth="900.0">
+         <children>
+            <TextField fx:id="tfEnd" layoutX="13.0" layoutY="61.0" prefHeight="25.0" prefWidth="424.0" />
+            <ChoiceBox fx:id="cbEndRA" layoutX="449.0" layoutY="61.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="tfEndCep" layoutX="626.0" layoutY="61.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="tfEndCid" layoutX="735.0" layoutY="61.0" prefHeight="25.0" prefWidth="87.0" />
+            <ChoiceBox fx:id="cbEndUF" layoutX="833.0" layoutY="61.0" prefHeight="25.0" prefWidth="55.0" />
+            <Label layoutX="12.0" layoutY="38.0" text="Endereço do  Empreendimento: " />
+            <Label layoutX="450.0" layoutY="38.0" text="Região Administrativa: " />
+            <Label layoutX="626.0" layoutY="38.0" text="Cep: " />
+            <Label layoutX="735.0" layoutY="38.0" text="Cidade: " />
+            <Label layoutX="834.0" layoutY="38.0" text="UF: " />
+            <TextField fx:id="tfEndLat" layoutX="280.0" layoutY="108.0" prefHeight="25.0" prefWidth="140.0" promptText="-15.7754084" />
+            <TextField fx:id="tfEndLon" layoutX="519.0" layoutY="108.0" prefHeight="25.0" prefWidth="140.0" promptText="-47.9411395" />
+            <Label layoutX="203.0" layoutY="112.0" text="Latitude (Y): " />
+            <Label layoutX="431.0" layoutY="112.0" text="Longitude (X): " />
+            <Button fx:id="btnEndMaps" layoutX="670.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnEndMapsHab" prefHeight="25.0" prefWidth="25.0" />
+         </children>
+      </Pane>
+      <Label fx:id="lblDataAtualizacao1" layoutX="772.0" layoutY="493.0" prefHeight="22.0" prefWidth="247.0" />
+   </children>
+</Pane>

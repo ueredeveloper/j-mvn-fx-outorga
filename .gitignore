@@ -1,0 +1,30 @@
+# Arquivos de compilação e build do Maven
+target/
+
+# Arquivos de configuração do IntelliJ IDEA
+.idea/
+
+# Arquivos de configuração do Eclipse
+.classpath
+.project
+.settings/
+
+# Arquivos gerados pelo JavaFX
+bin/
+out/
+
+# Arquivos de log
+*.log
+
+# Arquivos de dependências do Maven
+dependency-reduced-pom.xml
+.mvn/
+
+# Arquivos de cache do Maven
+.m2/
+
+# Arquivos temporários
+*.tmp
+
+# Arquivos de backup
+*~

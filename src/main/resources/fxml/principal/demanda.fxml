@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pDemanda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1140.0" styleClass="classFontSize" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="pDadosBasicos" layoutX="126.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="900.0">
+         <children>
+            <TextField fx:id="tfDocumento" layoutX="19.0" layoutY="27.0" prefHeight="25.0" prefWidth="520.0" />
+            <TextField fx:id="tfDocSei" layoutX="550.0" layoutY="27.0" prefHeight="25.0" prefWidth="128.0" />
+            <TextField fx:id="tfProcSei" layoutX="689.0" layoutY="27.0" prefHeight="25.0" prefWidth="197.0" />
+            <DatePicker fx:id="dpDataDistribuicao" layoutX="308.0" layoutY="87.0" prefHeight="25.0" prefWidth="125.0" promptText="01/01/0000" />
+            <DatePicker fx:id="dpDataRecebimento" layoutX="469.0" layoutY="87.0" prefHeight="25.0" prefWidth="125.0" promptText="01/01/0000" />
+            <TextField fx:id="tfResDen" layoutX="19.0" layoutY="124.0" prefHeight="25.0" prefWidth="865.0" />
+            <Label layoutX="551.0" layoutY="3.0" text="Número SEI: " />
+            <Label layoutX="690.0" layoutY="3.0" text="Processo SEI: " />
+            <Label layoutX="308.0" layoutY="64.0" text="Data de Distruibuição: " />
+            <Label layoutX="469.0" layoutY="64.0" text="Data de Recebimento: " />
+            <Label layoutX="19.0" layoutY="100.0" text="Resumo da Denúncia: " />
+            <Label layoutX="19.0" layoutY="3.0" text="Documento: " />
+         </children>
+      </Pane>
+      <Pane layoutX="126.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="900.0">
+         <children>
+            <Button fx:id="btnNovo" layoutX="40.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnNovoHabilitar" prefHeight="22.0" prefWidth="76.0" text="Novo" />
+            <Button fx:id="btnSalvar" layoutX="127.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnSalvarHabilitar" prefHeight="22.0" prefWidth="76.0" text="Salvar" />
+            <Button fx:id="btnEditar" layoutX="214.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnEditarHabilitar" prefHeight="22.0" prefWidth="76.0" text="Editar" />
+            <Button fx:id="btnExcluir" layoutX="302.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnExcluirHabilitar" prefHeight="22.0" prefWidth="76.0" text="Excluir" />
+            <Button fx:id="btnCancelar" layoutX="390.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnCancelarHabilitar" prefHeight="22.0" prefWidth="76.0" text="Cancelar" />
+            <Button fx:id="btnPesquisar" layoutX="784.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnPesquisarHabilitar" prefHeight="22.0" prefWidth="76.0" text="Pesquisar" />
+            <TextField fx:id="tfPesquisar" layoutX="477.0" layoutY="13.0" prefHeight="23.0" prefWidth="295.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tvLista" layoutX="126.0" layoutY="285.0" prefHeight="185.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="tcDocumento" prefWidth="409.0" text="Documento" />
+            <TableColumn fx:id="tcDocSEI" minWidth="0.0" prefWidth="232.0" text="Doc SEI" />
+            <TableColumn fx:id="tcProcSEI" prefWidth="232.0" text="Proc SEI" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblDataAtualizacao" layoutX="768.0" layoutY="488.0" prefHeight="22.0" prefWidth="247.0" />
+      <Pane layoutX="123.0" layoutY="520.0" prefHeight="59.0" prefWidth="895.0">
+         <children>
+            <Label fx:id="lblDenEnd" layoutX="79.0" layoutY="19.0" prefHeight="23.0" prefWidth="728.0" />
+            <Label layoutX="14.0" layoutY="21.0" text="Endereço:" />
+            <Button fx:id="btnEndDetalhes" layoutX="821.0" layoutY="17.0" mnemonicParsing="false" onAction="#btnEndDetalhesHabilitar" text="Detalhes" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

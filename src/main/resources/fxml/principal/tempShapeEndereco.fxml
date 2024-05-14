@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="886.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="25.0" layoutY="562.0" prefHeight="300.0" prefWidth="930.0">
+         <children>
+            <Pane layoutX="23.0" layoutY="13.0" prefHeight="260.0" prefWidth="813.0" />
+            <Pane layoutX="843.0" layoutY="13.0" prefHeight="260.0" prefWidth="65.0" />
+         </children>
+      </Pane>
+      <Accordion layoutX="25.0" layoutY="235.0" prefHeight="400.0" prefWidth="930.0">
+         <panes>
+            <TitledPane animated="false" text="Shape do Endereco">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="925.0">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="5.0" prefHeight="365.0" prefWidth="810.0" />
+                        <Pane layoutX="819.0" layoutY="5.0" prefHeight="365.0" prefWidth="100.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</Pane>

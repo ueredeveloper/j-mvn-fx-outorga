@@ -1,0 +1,261 @@
+* {
+	-fx-branco				: 	#FFFFFF;
+	-fx-preto				: 	#000000;
+	
+	-fx-primaria-clara			: 	#52ab60;  
+	-fx-primaria-escura			: 	#1b7b34;
+		
+	-fx-antagonica		: 	#4A4A4A; /* para mudar a letra de fundo do botão, por ex: */
+
+	-fx-fundo				: 	rgba(223,226,227, 1); /* cor de fundo sem transparencia */
+	
+	-fx-fundo-trans			: 	rgb(247,249,252,0.9); /* cor de fundo com transparencia */
+	
+	-fx-pane-superior 		:	rgba(27,123,52,0.85);
+	-fx-panes-laterais 		: 	rgba(82,171,86,0.85);
+   
+}
+
+
+/* tamanho da fonte */
+.root { 
+    -fx-font		: 12px "Arial";
+	-fx-font-family	: "Arial", sans-serif;
+}
+
+/* cor background ao chamar o programa */
+.button {
+     -fx-background-color	: -fx-primaria-escura; /* verde #027939 */ /*azul escuro #1E73BE */
+     -fx-text-fill			: -fx-branco; 
+     -fx-text-base-color	: -fx-branco;
+     -fx-font-weight		: bold;
+}
+/* ao passar o mouse 
+	muda a cor do background no combo box DD DMS UTM ao passa o mouse*/
+.button:hover { 
+    -fx-background-color	: -fx-branco;
+    -fx-text-fill			: -fx-primaria-escura; /*azul escuro = muda cor da letra do botao ao passar mouse */
+    -fx-text-base-color		: -fx-primaria-escura;
+}
+
+/* ao passar o mouse muda cor do texto */
+.button:pressed:hover { 
+    -fx-scale-y				: 1.1;
+    -fx-scale-x				: 1.1;
+    -fx-text-base-color		: -fx-primaria-escura; 
+    
+}
+
+.button-lateral {
+	-fx-background-color	: -fx-branco;
+	-fx-background-radius	: 0 0 0 0;
+	-fx-pref-width			: 120px;
+	-fx-pref-height			: 30px;
+	
+
+    -fx-text-fill		: -fx-preto; 
+    -fx-text-base-color	: -fx-preto;
+    -fx-font-weight		: bold;
+
+}
+
+.button-lateral:hover { 
+    -fx-background-color	: -fx-branco;
+    -fx-text-fill			: -fx-preto; /*azul escuro = muda cor da letra do botao ao passar mouse */
+    -fx-text-base-color		: -fx-preto;
+}
+
+/* ao passar o mouse muda cor do texto */
+.button-lateral:pressed:hover { 
+    -fx-scale-y				: 1.1;
+    -fx-scale-x				: 1.1;
+    -fx-text-base-color		: -fx-preto; 
+    
+}
+
+
+/*combobox e cores no popup = ao passar o mouse */
+.combo-box {
+   /*  -fx-background-color: #45A364;*/
+   
+     -fx-background-color	: -fx-primaria-escura; /* verde #027939 */ /*azul escuro #1E73BE */
+     -fx-text-fill			: -fx-branco; 
+     -fx-text-base-color	: -fx-branco;
+     -fx-font-weight		: bold;
+   
+}
+
+/*combobox e cores no popup = ao passar o mouse */
+.combo-box:hover {
+	
+    -fx-background-color	: -fx-branco;
+    -fx-text-fill			: -fx-primaria-escura; /*azul escuro = muda cor da letra do botao ao passar mouse */
+    -fx-text-base-color		: -fx-primaria-escura;
+   
+   
+}
+
+/*combobox e cores no popup = ao passar o mouse */
+.combo-box-popup .list-cell:filled:hover
+{
+    -fx-background-color	: -fx-primaria-clara;
+    
+}
+
+/* colocar na  cor certa o selecionado ao abrir o popup */
+.combo-box-popup .list-cell:selected 
+{
+    -fx-background-color	: -fx-primaria-clara;
+    -fx-scale-y				: 1.1;
+    -fx-scale-x				: 1.1;
+   
+}
+
+
+/* pane superior */
+.pane-superior { 
+	-fx-background-color: -fx-pane-superior /* escuro S */
+	
+}
+
+/* cor dos  panes dentro das tabs laterais */
+.pane-lateral { 
+	-fx-background-color: -fx-panes-laterais;
+	
+}
+.label {
+     -fx-text-fill			: -fx-antagonica;
+     -fx-text-base-color	: -fx-antagonica;
+     -fx-font-weight		: bold;
+}
+
+
+.estilo-mapa {
+	
+	-fx-background-color	: -fx-branco;
+	-fx-background-radius	: 0 0 0 0;
+	-fx-pref-width			: 25px;
+	-fx-pref-height			: 25px;
+	
+}
+
+/*botoes de estilo de mapa e cores */
+#btnNight {
+	-fx-background-color	:  #263C3F;
+}
+#btnBlueMap {
+	-fx-background-color	:  #30427A;
+}
+#btnGreenMap {
+	-fx-background-color	:  #537C35;
+}
+#btnRetroMap {
+	-fx-background-color	:  #E98D58;
+}
+
+/* cor de fundo tab, local do click */
+.tab { 
+	-fx-background-color	: -fx-branco; 	/*rgba(71,169,100,1);*/ /* escuro S */
+	-fx-border-radius		: 0 0 0 0;		/* tabs quadradas */
+	-fx-background-radius	: 0 0 0 0;
+}
+
+/* cor ao passar o mouse */
+.tab:hover { 
+    -fx-background-color	: -fx-primaria-escura; /*rgba(71,169,100,1);*/
+
+}
+/* cor ao selecionar */
+.tab:selected { 
+	-fx-background-color	: -fx-primaria-escura; /*rgba(71,169,100,1);*/
+}
+
+/* para o icon  */
+.tab .glyph-icon { 
+	-fx-fill				: -fx-preto; /* icon nas tabs na cor preta */
+}
+
+/* cor do icone ao passar o mouse */
+.tab:hover .glyph-icon { 
+	-fx-fill				: -fx-branco; /* icon nas tabs ao passar o mouse na cor branca */
+}
+/* cor do icone ao selecionar */
+.tab:selected .glyph-icon { 
+	-fx-fill				: -fx-branco; /* icon nas tabs ao selecionar na cor branca */
+}
+
+ /* cor ao passar o mouse do texto da tab */
+.tab:hover .tab-label {
+    -fx-background-color	: -fx-primaria-escura; /*rgba(71,169,100,1);*/
+    -fx-text-fill			: -fx-branco;
+}
+
+ /* cor do texto da tab ao selecionar */
+.tab:selected .tab-label  {
+    -fx-background-color	: -fx-primaria-escura; /*rgba(71,169,100,1);*/
+    -fx-text-fill			: -fx-branco;
+}
+
+/* para o fundo do tabPane ficar transparent, aparecer somente a tab para escolha */
+.tab-pane .tab-header-area .tab-header-background { 
+    -fx-background-color	: transparent	; /* fundo */
+    -fx-border-color		: -fx-primaria-escura; /*rgba(71,169,100,1);*/		/* cor da borda */
+  	-fx-border-radius		: 2 2 2 2;					/* arredondamento dos cantos */
+  	-fx-border-width		: 0 0 1 0; 						/* somente parte inferior aparecendo da borda */
+}
+
+.border-pane {
+	-fx-background-color	: transparent	;
+}
+
+/* barra de rolagem */
+.scroll-pane {
+	-fx-background-color	: transparent;
+ 	-fx-padding				: 5 5 0 0; /* distanciamento superior e direita das tabs e barra de rolagem */
+}
+
+/* para cor background do scrollpane */
+.scroll-pane .viewport {
+	-fx-background-color	: -fx-fundo-trans;
+
+}
+
+.scroll-bar{
+ -fx-background-color	: -fx-fundo; /* fundo  */
+ -fx-border-color		: transparent; /* borda sem cor */
+ -fx-background-radius	: 0em; /* scroll quadrado */
+ -fx-padding			: 0	3 0 2; /* para centralizar melhor  o .thumb */
+
+}
+
+/* parte de dentro do scroolbar */
+.thumb {
+ 	-fx-background-color	: -fx-primaria-clara;
+  	-fx-background-radius	: 0em;
+}
+
+.panes {
+ 	-fx-border-color 	: -fx-primaria-clara; 
+    -fx-border-width 	: 0 0 1 0; /* linha abaixo dos panes */
+    
+}
+
+
+.text-field {
+	-fx-background-color	: -fx-branco;
+	-fx-border-color 		: -fx-primaria-clara; 
+	-fx-border-width 		: 1 1 1 1; /* linha abaixo dos panes */
+	
+}
+
+.text-field:focused {
+	-fx-border-color 		: -fx-primaria-clara; 
+	-fx-border-width 		: 2 2 2 2; /* linha abaixo dos panes */
+	
+}
+
+.date-picker .input-line {
+	-fx-background-color	: -fx-primaria-clara;
+
+}
+

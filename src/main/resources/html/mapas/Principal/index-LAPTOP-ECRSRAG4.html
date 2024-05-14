@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  	<meta charset="UTF-8">
+  	<link rel="stylesheet" href="../Principal/css/principal.css">
+	  
+	<!-- json shapes -->
+	<script type="text/javascript" src="../Principal/json/geoJsonBacias.json"></script> 
+	<script type="text/javascript" src="../Principal/json/geoJsonUnidadesHidrograficas.json"></script>
+	<script type="text/javascript" src="../Principal/json/JsonSuperficial.json"></script>
+	<script type="text/javascript" src="../Principal/json/geoJsonFraturado.json"></script>
+	<script type="text/javascript" src="../Principal/json/geoJsonFreatico.json"></script>
+	  
+	<!-- js de inicalizacao e metodos principais utilizados para conexao javascript e java -->
+  	<script src="../Principal/js/principal.js" ></script>
+  	<script src="../Principal/js/metodos.js" ></script>
+  	
+  	<!--conversor de coordenadas   -->
+  	<script defer src="../Principal/js/vector3d.js" ></script> 
+	<script defer src="../Principal/js/latlon-ellipsoidal.js" ></script>
+	<script defer src="../Principal/js/utm.js" ></script>
+	<script defer src="../Principal/js/dms.js" ></script>
+	  
+	
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW4w0UULt1yedMrVImzkJUwbeW_7m7Ruk&libraries=places&language=pt&callback=initialize" async defer></script>
+
+
+</body>
+
+</html>

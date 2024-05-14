@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnDFMB5jZdijtWMqKg29OgvnCPEtxyMkI&callback=initMap">
+</script>
+
+<script>
+
+function initMap() {
+
+ var myLatLng;
+ var poligono;
+  // -15.697504,-47.961964
+ myLatLng = {lat: -15.697504, lng: -47.961964}; 
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    mapTypeId: 'satellite',
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'principal'
+  });
+ 
+ var i;
+ var shape = [];
+ var distancia = 0.001;
+ 
+ 
+ map.addListener('click', function(event) {
+ 
+ 	 myLatLng = {lat: event.latLng.lat(), lng: event.latLng.lng()};
+   
+   
+   while (distancia<0.12) {
+ 
+ 	 for (i=0;i<8;i++){
+ 
+ 		var cenSup = {lat: myLatLng.lat + (distancia) , lng: myLatLng.lng};
+  	shape.push(cenSup);
+    var dirSup = {lat: myLatLng.lat + (distancia) , lng: myLatLng.lng + (distancia)};
+  	shape.push(dirSup);
+    
+    var dir = {lat: myLatLng.lat, lng: myLatLng.lng + (distancia)};
+  	shape.push(dir);
+    
+    var dirInf = {lat: myLatLng.lat + (-distancia) , lng: myLatLng.lng + (distancia)};
+  	shape.push(dirInf);
+    
+    var cenInf = {lat: myLatLng.lat + (-distancia), lng: myLatLng.lng };
+  	shape.push(cenInf);
+    
+    var esqInf = {lat: myLatLng.lat + (-distancia) , lng: myLatLng.lng + (-distancia)};
+  	shape.push(esqInf);
+    
+    var esq = {lat: myLatLng.lat , lng: myLatLng.lng  + (-distancia)};
+  	shape.push(esq);
+    
+    var esqSup = {lat: myLatLng.lat  + (distancia) , lng: myLatLng.lng  + (-distancia)};
+  	shape.push(esqSup);
+    
+    if (poligono != null) {
+    	  poligono.setMap(null);
+        console.log('null');
+    }
+  
+    
+ 		// Construcao do poligono
+     poligono = new google.maps.Polygon({
+       paths: shape,
+       strokeColor:  '#FF0000',
+       strokeOpacity: 0.8,
+       strokeWeight: 1,
+       fillColor:  '#FF0000',
+       fillOpacity: 0.35
+     });
+
+     // setar poligono no mapa		
+     poligono.setMap(map);
+      
+ } // fim loop for
+ 
+          
+     distancia = distancia + 0.001; 
+     
+     }
+  
+ 
+ });
+ 
+ 
+
+ 
+  
+}
+
+/*
+
+0.001	0° 00' 3.6?		111.32 m
+0.0001	0° 00' 0.36?	11.132 m
+*/
+
+</script>
+
+
+</body>
+
+
+</html>

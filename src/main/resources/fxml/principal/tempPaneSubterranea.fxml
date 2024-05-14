@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="170.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="166.0" layoutY="5.0" prefHeight="30.0" prefWidth="95.0" text="Latitude (Y): " />
+      <TextField fx:id="tfIntLat" layoutX="261.0" layoutY="5.0" prefHeight="30.0" prefWidth="140.0" promptText="-15.7754084" />
+      <Label layoutX="411.0" layoutY="5.0" prefHeight="30.0" prefWidth="95.0" text="Longitude (X): " />
+      <TextField fx:id="tfIntLon" layoutX="506.0" layoutY="5.0" prefHeight="30.0" prefWidth="140.0" promptText="-47.9411395" />
+      <Button fx:id="btnIntMaps" layoutX="658.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnIntMapsHab" prefHeight="25.0" prefWidth="25.0" />
+      <Label layoutX="46.0" layoutY="33.0" prefHeight="30.0" prefWidth="160.0" text="Bacia: " />
+      <ComboBox layoutX="46.0" layoutY="63.0" prefHeight="30.0" prefWidth="160.0" />
+      <Label layoutX="216.0" layoutY="33.0" prefHeight="30.0" prefWidth="60.0" text="UH: " />
+      <ComboBox layoutX="216.0" layoutY="63.0" prefHeight="30.0" prefWidth="60.0" />
+      <Label layoutX="285.0" layoutY="33.0" prefHeight="30.0" prefWidth="150.0" text="Tipo de Poço: " />
+      <ComboBox layoutX="285.0" layoutY="63.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="445.0" layoutY="33.0" prefHeight="30.0" prefWidth="150.0" text="Subsistema: " />
+      <ComboBox layoutX="445.0" layoutY="63.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="605.0" layoutY="33.0" prefHeight="30.0" prefWidth="140.0" text="Código: " />
+      <TextField fx:id="tfVazaoPoco2" layoutX="605.0" layoutY="63.0" prefHeight="30.0" prefWidth="140.0" />
+      <Label layoutX="755.0" layoutY="33.0" prefHeight="30.0" prefWidth="150.0" text="Área atendida (Caesb): " />
+      <ComboBox layoutX="755.0" layoutY="63.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="15.0" layoutY="94.0" prefHeight="30.0" prefWidth="150.0" text="Vazão Subsistema (L/h): " />
+      <TextField fx:id="tfVazaoPoco" layoutX="15.0" layoutY="124.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="168.0" layoutY="93.0" prefHeight="30.0" prefWidth="140.0" text="Vazão Teste (L/h): " />
+      <TextField fx:id="tfVazaoPoco1" layoutX="175.0" layoutY="123.0" prefHeight="30.0" prefWidth="140.0" />
+      <Label layoutX="325.0" layoutY="93.0" prefHeight="30.0" prefWidth="140.0" text="Vazão Outorgada (L/h): " />
+      <TextField fx:id="tfVazaoPoco11" layoutX="325.0" layoutY="123.0" prefHeight="30.0" prefWidth="140.0" />
+      <Label layoutX="475.0" layoutY="93.0" prefHeight="30.0" prefWidth="110.0" text="Nível Estático (m): " />
+      <TextField fx:id="tfEstatico" layoutX="475.0" layoutY="123.0" prefHeight="30.0" prefWidth="110.0" />
+      <Label layoutX="596.0" layoutY="93.0" prefHeight="30.0" prefWidth="120.0" text="Nível Dinâmico (m): " />
+      <TextField fx:id="tfDinamico" layoutX="595.0" layoutY="123.0" prefHeight="30.0" prefWidth="120.0" />
+      <Label layoutX="725.0" layoutY="93.0" prefHeight="30.0" prefWidth="70.0" text="Prof. (m): " />
+      <TextField fx:id="tfProfundidade" layoutX="725.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" />
+      <Label layoutX="805.0" layoutY="93.0" prefHeight="30.0" prefWidth="130.0" text="Em operação desde: " />
+      <DatePicker fx:id="dpDataSubterranea" layoutX="805.0" layoutY="123.0" prefHeight="30.0" prefWidth="130.0" />
+   </children>
+</Pane>

@@ -1,0 +1,79 @@
+.tab { /* cor de fundo tab, local do click */
+	-fx-background-color: white; 
+
+}
+.tab:hover { /* cor ao passar o mouse */
+    -fx-background-color: #3A86C8;
+   
+}
+.tab:hover .tab-label{ /* cor ao passar o mouse do texto da tab */
+    -fx-background-color: #3A86C8;
+    -fx-text-fill	: #FFFFFF;
+
+}
+.tab:selected { /* cor ao selecionar */
+    -fx-background-color: #3A86C8;
+    
+}
+.tab:selected .tab-label { /* cor do texto da tab ao selecionar */
+    -fx-background-color: #3A86C8;
+    -fx-text-fill	: #FFFFFF;
+
+}
+.btnClass { /* cor do botao e texto */
+	-fx-text-fill	: #FFFFFF;
+	-fx-background-color: rgba(110,195,131,0.90);
+	-fx-border-color: rgba(176,176,176,1);
+	-fx-border-radius: 2 2 2 2;
+	
+}
+.btnClass:hover { /* cor do botao ao passar o mouse */
+	-fx-background-color: rgba(110,195,131,0.80);
+}
+.btnClass:pressed { /* cor do botao ao pressionar */
+	-fx-background-color: rgba(98,181,118,1);
+	
+}
+
+.tab-pane .tab-header-area .tab-header-background { /* cor da tab */
+    -fx-background-color: transparent	; /* fundo */
+    -fx-border-color: #3A86C8; 				/* cor da borda */
+  	-fx-border-radius: 2 2 2 2;					/* arredondamento dos cantos */
+  	-fx-border-width: 0 0 1 0; 						/* somente parte inferior aparecendo da borda */
+}
+.anchorClass {
+	-fx-border-color: #3A86C8; 
+	-fx-border-width: 3 0 0 0;
+	
+}
+
+.html-editor {
+	
+	-fx-font: 14 cambria;
+	-fx-border-color: #45637C;
+	-fx-border-style: solid;
+	-fx-border-width: 2;   
+
+}
+
+.html-editor .button, .html-editor .toggle-button {
+	
+	-fx-background-color: lightblue;
+}
+
+.html-editor-background {
+	
+	-fx-color-label-visible: true;
+
+}
+
+.html-editor-foreground {
+	
+	-fx-color-label-visible: true;
+	
+}
+
+.text {
+    -fx-font-smoothing-type: lcd; 
+} 
+

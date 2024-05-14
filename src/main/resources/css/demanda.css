@@ -1,0 +1,9 @@
+.scroll-pane {
+     
+       -fx-font: 15px "Arial";
+     
+       -fx-background-color: -fx-box-border,-fx-background;
+       -fx-background-insets: 0, 1;
+       -fx-padding: 1.0;
+       
+}

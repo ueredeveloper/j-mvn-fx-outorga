@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+
+<fx:root fx:id="pBancosDiversos" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="1140.0" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="tpBancosDiversos" layoutY="-3.0" prefHeight="628.0" prefWidth="1140.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="100.0">
+        <tabs>
+         	<Tab fx:id="tabBancoAccess" styleClass="tabPaneClass" text="  BANCO ACCESS  " />
+         	<Tab fx:id="tabBancoCaesb" styleClass="tabPaneClass" text="  BANCO CAESB  " />
+         </tabs>
+      </TabPane>
+   </children>
+</fx:root>

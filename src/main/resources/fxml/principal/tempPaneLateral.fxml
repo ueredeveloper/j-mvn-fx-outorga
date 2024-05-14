@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="135.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Opções">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="459.0" prefWidth="240.0">
+               <children>
+                  <Pane layoutX="3.0" layoutY="22.0" prefHeight="415.0" prefWidth="130.0">
+                     <children>
+                        <Button fx:id="btnTerrain" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" prefWidth="95.0" text="TERRAIN" />
+                        <Button fx:id="btnRoadMap" layoutX="17.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="ROADMAP" />
+                        <Button fx:id="btnSattelite" layoutX="17.0" layoutY="60.0" mnemonicParsing="false" prefWidth="95.0" text="SATTELITE" />
+                        <Button fx:id="btnHybrid" layoutX="17.0" layoutY="85.0" mnemonicParsing="false" prefWidth="95.0" text="HYBRID" />
+                        <Button fx:id="btnZoomOut" layoutX="17.0" layoutY="382.0" mnemonicParsing="false" prefWidth="95.0" text="ZOOM" />
+                        <Button fx:id="btnZoomIn" layoutX="17.0" layoutY="357.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="ZOOM" />
+                        <CheckBox fx:id="ceckBacia" layoutX="15.0" layoutY="150.0" mnemonicParsing="false" prefWidth="100.0" text="Bacias do DF" />
+                        <CheckBox fx:id="checkRiodDF" layoutX="15.0" layoutY="175.0" mnemonicParsing="false" prefWidth="100.0" text="Rios do DF" />
+                        <CheckBox fx:id="checkRiosUniao" layoutX="15.0" layoutY="200.0" mnemonicParsing="false" prefWidth="100.0" text="Rios da União" />
+                        <CheckBox fx:id="checkFraturado" layoutX="15.0" layoutY="225.0" mnemonicParsing="false" prefWidth="100.0" text="Fraturado" />
+                        <CheckBox fx:id="checkPoroso" layoutX="15.0" layoutY="250.0" mnemonicParsing="false" prefWidth="100.0" text="Poroso" />
+                        <CheckBox fx:id="checkUTM" layoutX="15.0" layoutY="275.0" mnemonicParsing="false" prefWidth="100.0" text="UTM" />
+                        <CheckBox fx:id="checkTrafego" layoutX="15.0" layoutY="300.0" mnemonicParsing="false" prefWidth="100.0" text="Tráfego" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
